@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+.slide_box{ background:url(loading1.gif) center no-repeat;}
+.slide_box ul {position:relative;width:14750px;padding:0;margin:0;}
+.slide_box li {float:left;/*width:950px;height:240px;*/list-style:none;}
+.slide_box img {border:0; }
+.slide_box {position:relative;/*width:950px;height:240px;*/overflow:hidden;width:980px}
+.num_list {position:absolute;right:4px;bottom:10px; _bottom:4px;+bottom:4px;height:15px;}
+.num_list li {float:left;width:16px;height:9px;margin-right:5px;border:none;list-style:none;color:#fff; overflow:hidden;}
+.num_list a {display:block;width:16px;height:9px;line-height:15px;padding-top:0px; background:#dddcdc;  color:#fff;text-decoration:none; padding-left:5px;/**/ text-indent:-20000px; }
+.num_list a:hover { /*background:#eeeeee;*/background:url(bg2.jpg) no-repeat 0 0px;}
+.num_list .on {/**/background:url(bg2.jpg) no-repeat 0 0;color:#fff; /*background:#eeeeee;*/}

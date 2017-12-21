@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery Raty - A Star Rating Plugin</title>
+    <LINK href="jquery-ui.css" type=text/css rel="Stylesheet">
+    <LINK href="base.css" type=text/css rel="Stylesheet">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.raty.js"></script>
+    <style type="text/css">
+		#slider-range-max{width:200px;}
+		#slider-range{ width:200px;}
+		.amount-range{border:0; color:#f6931f; font-weight:bold; width:50px;}
+		.amount{border:0; color:#f6931f; font-weight:bold; width:20px;}
+    </style>
+    
+</head>
+<body>
+    <div id="content">
+        <div class="session-first">第一种(存在小数):</div>
+        <div id="precision"></div>
+        <div id="halfscore"></div>
+        
+        <div class="session-first">第二种(定义显示内容):</div>
+        <div id="mystar"></div>
+        <div id="intscore"></div>
+        <div class="session-first">第三种(定义组):</div>
+        <div class="group"></div>
+        <div class="group"></div>
+        <div class="group"></div> 
+        <div class="group"></div>
+        <div class="group"></div> <br />
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('#precision').raty({
+              half:       true,
+              precision:  true,
+              target:     '#halfscore',
+              targetKeep: true,
+              targetType: 'number'
+            });
+            
+            $('#mystar').raty({
+                hintList: ['很不满意', '不太满意', '一般', '比较满意', '非常满意'],
+                target: '#intscore',
+                targetKeep: true
+                
+            });
+            
+            $('.group').raty({
+                scoreName:'score[]'
+            });
+        });
+    </script>
+</body>
+</html>
